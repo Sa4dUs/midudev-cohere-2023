@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "CascadiaCodePL", Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+#__next {
+  height: 100%;
+}
