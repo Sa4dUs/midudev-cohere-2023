@@ -10,10 +10,12 @@ export default function Home() {
   const refTextarea = useRef<HTMLTextAreaElement>(null);
   let [isLoading, setIsLoading] = useState(false);
   let [prompt, setPrompt] = useState<string | undefined>("");
+  let [toggle, setToggle] = useState<boolean | undefined>(false);
   let [value, setValue] = useState("");
 
   const onClick = () => {
     setPrompt(refTextarea.current?.value);
+    setToggle(!toggle)
   };
 
   useEffect(() => {
@@ -29,20 +31,17 @@ export default function Home() {
       })
       .catch((e) => console.log(e));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [prompt]);
+  }, [toggle]);
 
   return (
     <>
       <Head />
-      <div className="flex flex-col justify-center items-center h-full bg-black">
-        <form className="flex flex-col gap-4">
+      <main className="flex flex-col justify-center items-center h-screen bg-slate-800">
+        <form className="flex flex-col gap-4 bg-slate-600 p-10 rounded-md">
           <Image src={'/namey-logo.png'} alt={'Namey! Logo'} width={300} height={300} className='m-auto lg:mx-72 lg:my-8 '/>
-          {/*<h1 className="text-center text-5xl font-bolds px-4">
-            Namey! name your startup
-  </h1>*/}
           <textarea
             id="large"
-            className="h-36 w-full text-black resize-none rounded-md disabled:resize-none"
+            className="bg-slate-700 h-36 w-full text-white resize-none rounded-md placeholder-gray-400 focus:ring-purple-400 disabled:resize-none"
             placeholder="Enter your keywords separated by comma..."
             ref={refTextarea}
           />
@@ -71,7 +70,7 @@ export default function Home() {
             </button>
           )}
         </form>
-      </div>
+      </main>
     </>
   );
 }

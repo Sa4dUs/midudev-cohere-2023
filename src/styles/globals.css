@@ -1224,6 +1224,9 @@ input:checked + .toggle-bg {
 .h-0 {
   height: 0px;
 }
+.h-screen {
+  height: 100vh;
+}
 .w-6 {
   width: 1.5rem;
 }
@@ -1846,9 +1849,17 @@ input:checked + .toggle-bg {
   --tw-bg-opacity: 1;
   background-color: rgb(250 202 21 / var(--tw-bg-opacity));
 }
-.bg-black {
+.bg-slate-800 {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+.bg-slate-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
@@ -2063,6 +2074,9 @@ input:checked + .toggle-bg {
 .\!p-2 {
   padding: 0.5rem !important;
 }
+.p-10 {
+  padding: 2.5rem;
+}
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -2175,10 +2189,6 @@ input:checked + .toggle-bg {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 .font-medium {
   font-weight: 500;
@@ -2333,10 +2343,6 @@ input:checked + .toggle-bg {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
 }
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
 .underline {
   text-decoration-line: underline;
 }
@@ -2371,6 +2377,14 @@ input:checked + .toggle-bg {
 .placeholder-green-700::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(4 108 78 / var(--tw-placeholder-opacity));
+}
+.placeholder-gray-400::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+}
+.placeholder-gray-400::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-placeholder-opacity));
 }
 .opacity-50 {
   opacity: 0.5;
@@ -2506,7 +2520,7 @@ body {
   height: 100%;
   font-family: "CascadiaCodePL", Verdana, Geneva, Tahoma, sans-serif;
   color: white;
-  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 #__next {
@@ -2927,6 +2941,11 @@ body {
 .focus\:ring-green-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(14 159 110 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-purple-400:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(172 148 250 / var(--tw-ring-opacity));
 }
 
 .active\:bg-yellow-500:active {

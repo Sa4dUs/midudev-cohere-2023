@@ -1,8 +1,8 @@
 export default function fetchData(prompt: string | undefined) {
   const body = {
-    model: "command-xlarge-20221108",
-    prompt: `Give me a startup name given the following keywords: ${prompt}.`,
-    max_token: 50,
+    model: "command-xlarge-nightly",
+    prompt: `Write 1 name for a startup for the keywords: ${prompt}.`,
+    max_token: 10,
     temperature: 0.9,
     k: 0,
     p: 0.75,

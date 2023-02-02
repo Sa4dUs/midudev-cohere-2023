@@ -8,7 +8,7 @@ body {
   height: 100%;
   font-family: "CascadiaCodePL", Verdana, Geneva, Tahoma, sans-serif;
   color: white;
-  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 #__next {
